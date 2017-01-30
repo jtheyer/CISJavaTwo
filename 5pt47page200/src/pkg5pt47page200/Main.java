@@ -1,5 +1,5 @@
 /**
- *
+ * Check ISBN-13
  * @author Jason Heyer
  */
 package pkg5pt47page200;
