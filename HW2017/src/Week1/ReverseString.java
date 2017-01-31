@@ -1,5 +1,5 @@
 /**
- * Page.200 #5.46
+ * Page 200 #5.46
  * Prompt User for a string, return that string in reverse.
  * @author Jason Heyer
  */
