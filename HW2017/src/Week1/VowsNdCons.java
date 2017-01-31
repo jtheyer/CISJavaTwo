@@ -1,14 +1,13 @@
 /**
- * Count vowels and consonants
- *
+ * Page 201 #5.49
+ * Prompt User for string then count the occurrence of vowels and consonants.
  * @author Jason Heyer
  */
-package pkg5pt49page200;
+package Week1;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class VowsNdCons {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a string: ");
@@ -33,5 +32,4 @@ public class Main {
         System.out.println("The number of vowels is " + vows);
         System.out.println("The number of consonants is " + cons);
     }
-
 }
