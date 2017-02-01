@@ -32,7 +32,7 @@ public class FormatInt {
     public static int format(String num, int width) {
         int addZeros = width; //Number of zeros to add on to num
         if(width > num.length()){
-            
+            num.append('0');
         }
         return result;
     }
