@@ -14,6 +14,10 @@ public class Guess {
         Scanner input = new Scanner(System.in);
         int guess = input.nextInt();
         int answer = (int)(Math.random() * 10);
+        //Ensure answer will not be 0
+        while(answer == 0){
+            answer = (int)(Math.random() * 10);
+        }
 
         while (guess != answer) {
             if (guess < answer) {
