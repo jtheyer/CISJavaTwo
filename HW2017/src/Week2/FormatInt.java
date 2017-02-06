@@ -4,7 +4,7 @@
  *
  * @author Jason Heyer
  */
-package Week1;
+package Week2;
 
 import java.util.Scanner;
 
@@ -15,25 +15,29 @@ public class FormatInt {
     *   format(34, 5) returns 00034
     *   format(34, 1) returns 34
      */
+    
+    //Create method to format the number
+    public static String format(int num, int width) {
+        String result = "" + num;
+        if (result.length() < width) {
+             int zeros = width - result.length();
+            for(int i=0; i<zeros; i++ ){
+            result = "0" + result;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         //Prompt for integer
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number to format here: ");
-        String num = input.next();
-        
+        int num = input.nextInt();
+
         //Prompt for number width
         System.out.print("Specify width: ");
         int width = input.nextInt();
         //Return String invoking format(number, width)
-        System.out.print("The formatted result is: " + num);
-    }
-    //Format the number
-    
-    public static int format(String num, int width) {
-        int addZeros = width; //Number of zeros to add on to num
-        if(width > num.length()){
-            
-        }
-        return result;
+        System.out.print("The formatted number is: " + format(num, width));
     }
 }
