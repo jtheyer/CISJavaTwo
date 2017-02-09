@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 55heyerjt01
+ * @author jason
  */
 public class ChessBoardTest {
 
@@ -29,7 +29,7 @@ public class ChessBoardTest {
     public static void tearDownClass() {
     }
 
-    @Before //Code here for anything that need to be set up a certain way before the test
+    @Before
     public void setUp() {
     }
 
@@ -43,14 +43,14 @@ public class ChessBoardTest {
     @Test
     public void testMove() {
         System.out.println("move");
-        int rowFrom = 0;
+        int rowFrom = 1;
         int colFrom = 0;
-        int rowTo = 0;
+        int rowTo = 3;
         int colTo = 0;
         ChessBoard instance = new ChessBoard();
         instance.move(rowFrom, colFrom, rowTo, colTo);
-        assertEquals(instance.board[rowFrom][colFrom], 'p');
-        assertEquals(instance.board[rowTo][colTo], '-');
+        assertEquals(instance.board[rowFrom][colFrom], '-');
+        assertEquals(instance.board[rowTo][colTo], 'p');
     }
 
     /**
@@ -59,10 +59,15 @@ public class ChessBoardTest {
     @Test
     public void testReset() {
         System.out.println("reset");
+        int rowFrom = 1;
+        int colFrom = 0;
+        int rowTo = 3;
+        int colTo = 0;
         ChessBoard instance = new ChessBoard();
+        instance.move(1, 0, 3, 0);
         instance.reset();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(instance.board[rowFrom][colFrom], 'p');
+        assertEquals(instance.board[rowTo][colTo], '-');
     }
 
     /**
@@ -74,8 +79,7 @@ public class ChessBoardTest {
         ChessBoard instance = new ChessBoard();
         String expResult = "";
         String result = instance.toString();
-      //  assertEquals(expResult, result);
-       assertNotEquals(expResult, result);
+        assertNotEquals(expResult, result);
         
     }
 
