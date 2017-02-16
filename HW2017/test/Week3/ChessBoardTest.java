@@ -48,7 +48,7 @@ public class ChessBoardTest {
         int rowTo = 3;
         int colTo = 0;
         ChessBoard instance = new ChessBoard();
-        instance.move(rowFrom, colFrom, rowTo, colTo);
+        instance.move("h2", "h4");
         assertEquals(instance.board[rowFrom][colFrom], '-');
         assertEquals(instance.board[rowTo][colTo], 'p');
     }
@@ -64,7 +64,7 @@ public class ChessBoardTest {
         int rowTo = 3;
         int colTo = 0;
         ChessBoard instance = new ChessBoard();
-        instance.move(1, 0, 3, 0);
+        instance.move("h2","h4");
         instance.reset();
         assertEquals(instance.board[rowFrom][colFrom], 'p');
         assertEquals(instance.board[rowTo][colTo], '-');
