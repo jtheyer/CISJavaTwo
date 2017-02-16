@@ -1,4 +1,4 @@
-/**
+ /**
 * Page 445 #11.2
  * Person, Student, Faculty, and Staff classes...
  * @author 55heyerjt01
@@ -78,7 +78,7 @@ public class Person {
             super();
         }
 
-        public Employee(String office, double salary, LocalDate hireDate, String name, String address, int phone, String email) {
+        public Employee(String office, double salary, LocalDate hireDate, String name, String address, String phone, String email) {
             super(name, address, phone, email);
             this.office = office;
             this.salary = salary;
@@ -127,7 +127,7 @@ public class Person {
             this.rank = rank;
         }
 
-        public Faculty(String officeHours, String rank, String office, double salary, LocalDate hireDate, String name, String address, int phone, String email) {
+        public Faculty(String officeHours, String rank, String office, double salary, LocalDate hireDate, String name, String address, String phone, String email) {
             super(office, salary, hireDate, name, address, phone, email);
             this.officeHours = officeHours;
             this.rank = rank;
@@ -162,7 +162,7 @@ public class Person {
         public Staff() {
         }
 
-        public Staff(String title, String office, double salary, LocalDate hireDate, String name, String address, int phone, String email) {
+        public Staff(String title, String office, double salary, LocalDate hireDate, String name, String address, String phone, String email) {
             super(office, salary, hireDate, name, address, phone, email);
             this.title = title;
         }
@@ -177,12 +177,6 @@ public class Person {
         
         public String toString(){
             return "Staff " + getName();
-        }
-    }
-    
-    class PersonTest{
-        public static void main(String[] args) {
-            Person bub1 = new Person("bub", "1 main st", "123456", "bub@yahoo.com");
         }
     }
 }
