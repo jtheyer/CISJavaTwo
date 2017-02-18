@@ -14,39 +14,131 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 55heyerjt01
+ * @author jason
  */
 public class PersonTest {
-
+    
     public PersonTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
 
-    //Create a Person
+    /**
+     * Test of getName method, of class Person.
+     */
     @Test
-    public void testPerson() {
-        Person bub1 = new Person("bub", "1 main st", "123456789", "bub@yahoo.com");
-        System.out.println(bub1);
-        
+    public void testGetName() {
+        System.out.println("getName");
+        Person instance = new Person();
+        String expResult = "";
+        String result = instance.getName();
+        assertEquals(expResult, result);
     }
 
-    //Create a Student + String status, String name, String address, String phone, String email 
-    public void testPerson() {
-        Student bub2 = new Student("freshman", "Bub2", "1 west Street", "123456879", "bub2@gmail.com");
+    /**
+     * Test of setName method, of class Person.
+     */
+    @Test
+    public void testSetName() {
+        System.out.println("setName");
+        String name = "";
+        Person instance = new Person();
+        instance.setName(name);
     }
+
+    /**
+     * Test of getAddress method, of class Person.
+     */
+    @Test
+    public void testGetAddress() {
+        System.out.println("getAddress");
+        Person instance = new Person();
+        String expResult = "";
+        String result = instance.getAddress();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setAddress method, of class Person.
+     */
+    @Test
+    public void testSetAddress() {
+        System.out.println("setAddress");
+        String address = "";
+        Person instance = new Person();
+        instance.setAddress(address);
+    }
+
+    /**
+     * Test of getPhone method, of class Person.
+     */
+    @Test
+    public void testGetPhone() {
+        System.out.println("getPhone");
+        Person instance = new Person();
+        String expResult = "";
+        String result = instance.getPhone();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setPhone method, of class Person.
+     */
+    @Test
+    public void testSetPhone() {
+        System.out.println("setPhone");
+        String phone = "";
+        Person instance = new Person();
+        instance.setPhone(phone);
+    }
+
+    /**
+     * Test of getEmail method, of class Person.
+     */
+    @Test
+    public void testGetEmail() {
+        System.out.println("getEmail");
+        Person instance = new Person();
+        String expResult = "";
+        String result = instance.getEmail();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setEmail method, of class Person.
+     */
+    @Test
+    public void testSetEmail() {
+        System.out.println("setEmail");
+        String email = "";
+        Person instance = new Person();
+        instance.setEmail(email);
+    }
+
+    /**
+     * Test of toString method, of class Person.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        Person instance = new Person("Joe", "1mainSt", "570555555", "joe@vo.bo");
+        String expResult = "";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
+    
 }
