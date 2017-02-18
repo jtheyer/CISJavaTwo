@@ -1,5 +1,5 @@
 /**
- * Page 447 #11.12
+ * Page 447 #11.13
  * Remove duplicates from an Integer ArrayList. (not working)
  *
  * @author jason
