@@ -1,5 +1,5 @@
 /**
- * Page 445 #11.4 (Return
+ * Page 445 #11.4 (Return highest value in an ArrayList of Integers)
  *
  * @author jason
  */
