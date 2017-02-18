@@ -1,6 +1,6 @@
 /**
  * Page 447 #11.11 
- * Display the sum of an ArrayList.
+ * Sort an ArrayList.
  * @author jason
  */
 package Week4;
