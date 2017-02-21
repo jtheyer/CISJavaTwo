@@ -1,5 +1,5 @@
 /**
- * Page 488 #12.4
+ * Page 488 #12.3
  * Array index out of bounds exception
  * Create array w/ 100 random #'s, prompt for index and
  *  return corresponding element.
@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class ArrayiOutOfBoundEx {
 
-    public static int returnIndex(ArrayList<Integer> list, int index) {
+    public static int returnIndex (ArrayList<Integer> list, int index) {
         index = list.get(index);
         return index;
     }
@@ -29,12 +29,12 @@ public class ArrayiOutOfBoundEx {
         System.out.println(list);
         do{
             try{
-                System.out.print("Choose an element index: ");
+            System.out.print("Choose an element index: ");
             int index = input.nextInt();
             System.out.println(returnIndex(list, index));
             continueInput = false;
-            }catch(ArrayIndexOutOfBoundsException ex){
-                System.out.println("Out of Bounds");
+            }catch(IndexOutOfBoundsException ex){
+                System.out.println("Out of Bounds (" + ex.getMessage()+")");
                 input.nextLine(); //Discard input
             }
         }while(continueInput);
