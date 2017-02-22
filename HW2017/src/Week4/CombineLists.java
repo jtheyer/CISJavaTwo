@@ -1,6 +1,7 @@
 /**
  * Page 447 #11.14
- * Combine two lists.
+ * Combine two lists. 
+ * (Test program in /Test Packages/Week4/CombineListsTest.java)
  *
  * @author jason
  */

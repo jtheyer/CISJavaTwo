@@ -22,13 +22,15 @@ public class TriangleTest {
         int c = input.nextInt();
         System.out.print("Color of triangle: ");
         String color = input.next();
-        System.out.println("Do you want the triangle filled? (y/n?): ");
+        System.out.print("Do you want the triangle filled? (y/n?): ");
         boolean fill = false;
         if(input.hasNext("y")){
             fill = true;
         }
+        
         GeometricObject tri1 = new Triangle(a, b, c, color, fill);
-        System.out.println("Area of Triangle is: " + tri1.getArea());
+        
         System.out.println(tri1.toString());
+        System.out.println("Area of Triangle is: " + tri1.getArea());
     }
 }
