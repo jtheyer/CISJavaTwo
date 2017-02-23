@@ -22,7 +22,7 @@ public class ArrayiOutOfBoundEx {
         boolean continueInput = true;
         Scanner input = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             int e = (int) (Math.random() * 100);
             list.add(e);
         }
