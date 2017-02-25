@@ -6,30 +6,45 @@
  */
 package Week4Ch12;
 
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
 
 public class CountFromFile {
-    
-    public static void main(String[] args) throws Exception {
-        int count = 0;
+
+    public static void main(String[] args) throws IOException {
+
         //Create File instance
         java.io.File file = new java.io.File("FileCharSum.txt");
-//        if (file.exists()) {
-//            System.out.println("File already Exists");
-//            System.exit(0);
-//        }
-        java.io.PrintWriter output = new java.io.PrintWriter("FileCharSum.txt");
-            output.print("Things and stuff here... ");
-            output.println("more things and stuff here on same line.");
-        
-        //Create Scanner for reading from " " file. 
-        Scanner sc = new Scanner(new File("FileCharSum.txt"));
-        
-        //Use Scanner sc to read data from " " file. 
-        while(sc.){
-           count++;
+
+        //Write to the file
+        PrintWriter output = new java.io.PrintWriter(file);
+        output.print("Test test ");
+        output.println("more test");
+        output.close();
+
+        //Create Scanner for reading from " " file.
+        //and work the problem...
+        int lines = 0;
+        int words = 0;
+        int chars = 0;
+
+        try (Scanner inputFile = new Scanner(file);) {
+            while (inputFile.hasNext()) {
+                String s = inputFile.nextLine();
+                lines++;
+                chars = s.length();
+                String[] split = s.split(" ");
+                for (String word : split) {
+                    words++;
+                }
+            }
+            System.out.println("There are |" + chars + "| characters.");
+            System.out.println("There are |" + words + "| words.");
+            System.out.println("There are |" + lines + "| lines.");
+
         }
-        System.out.println(count);
     }
+    //Use Scanner sc to read data from " " file. 
+    // Scanner fileInput = new Scanner(file);
+
 }
