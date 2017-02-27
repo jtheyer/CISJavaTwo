@@ -67,7 +67,7 @@ public class WriteAndRead {
    }
    //\\Makes an ArrayList<Integer> into an int Array 
    public static int[] listToArray(){
-      int[] myNums = new int[100];//100 for simplicity
+      int[] myNums = new int[myList.size()];
       for(int i=0; i < 100; i++){
           myNums[i] = myList.get(i);
       }
