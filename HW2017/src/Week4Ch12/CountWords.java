@@ -1,5 +1,5 @@
 /**
- * Page 488 #12.3
+ * Page 490 #12.19
  * Count the number of words in Lincoln speech from given URL...
  *  http://cs.armstrong.edu/liang/data/Lincoln.txt
  *
